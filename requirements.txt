@@ -1,4 +1,5 @@
 numpy
 Flask
+scikit-learn
 gunicorn == 20.0.4
 requests
