@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <title>Home Page</title>
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -9,6 +10,20 @@
   
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </head>
+
+<style>
+  select {
+  -webkit-appearance: none;
+  /*webkit browsers */
+  -moz-appearance: none;
+  /*Firefox */
+  appearance: none;
+  /* modern browsers */
+  border-radius: 0;
+
+}
+
+</style>
 <body>
       
     
@@ -37,45 +52,57 @@
   <!-- 2 column grid layout with text inputs for the first and last names -->
   <div class="row mb-4">
     <div class="col">
-      <div class="form-outline">
-          <label class="form-label" for="form3Example1">First name</label>
-          <input type="text" id="form3Example1" class="form-control" />
+      <div class="form-group">
+          <label class="form-label" for="form3Example1">Gender</label>
+          <select name="gender"class="form-control">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+
+          
       </div>
     </div>
     <div class="col">
       <div class="form-outline">
-         <label class="form-label" for="form3Example2">Last name</label>
-          <input type="text" id="form3Example2" class="form-control" />
-      </div>
+         <label class="form-label" for="form3Example2">Status</label>
+         <select name="married"class="form-control">
+          <option value="1">Married</option>
+          <option value="2">Un-Married</option>
+        </select>
+    </div>
     </div>
   </div>
         
   <div class="row mb-4">
     <div class="col">
       <div class="form-outline">
-          <label class="form-label" for="form3Example1">First name</label>
-          <input type="text" id="form3Example1" class="form-control" />
-      </div>
+          <label class="form-label" for="form3Example1">Education</label>
+          <select name="education"class="form-control">
+            <option value="1">Graduate</option>
+            <option value="2">Not Graduate</option>
+          </select>      </div>
     </div>
     <div class="col">
       <div class="form-outline">
-         <label class="form-label" for="form3Example2">Last name</label>
-          <input type="text" id="form3Example2" class="form-control" />
-      </div>
+         <label class="form-label" for="form3Example2">Work</label>
+         <select name="employment"class="form-control">
+          <option value="1">Employed</option>
+          <option value="2">Not-Employed</option>
+        </select>      </div>
     </div>
   </div>
         
    <div class="row mb-4">
     <div class="col">
       <div class="form-outline">
-          <label class="form-label" for="form3Example1">First name</label>
-          <input type="text" id="form3Example1" class="form-control" />
+          <label class="form-label" for="form3Example1">Applicant Income</label>
+          <input name="applicant_income"type="text" id="form3Example1" class="form-control" />
       </div>
     </div>
     <div class="col">
       <div class="form-outline">
-         <label class="form-label" for="form3Example2">Last name</label>
-          <input type="text" id="form3Example2" class="form-control" />
+         <label class="form-label" for="form3Example2">Co-Applicant Income</label>
+          <input name ="coapplicant_income"type="text" id="form3Example2" class="form-control" />
       </div>
     </div>
   </div>
@@ -83,14 +110,14 @@
     <div class="row mb-4">
     <div class="col">
       <div class="form-outline">
-          <label class="form-label" for="form3Example1">First name</label>
-          <input type="text" id="form3Example1" class="form-control" />
+          <label class="form-label" for="form3Example1">Loan Amount</label>
+          <input name="loan_amount"type="text" id="form3Example1" class="form-control" />
       </div>
     </div>
     <div class="col">
       <div class="form-outline">
-         <label class="form-label" for="form3Example2">Last name</label>
-          <input type="text" id="form3Example2" class="form-control" />
+         <label class="form-label" for="form3Example2">Loan Amount Term</label>
+          <input name="loan_amount_term" type="text" id="form3Example2" class="form-control" />
       </div>
     </div>
   </div>
@@ -98,29 +125,36 @@
         <div class="row mb-4">
     <div class="col">
       <div class="form-outline">
-          <label class="form-label" for="form3Example1">First name</label>
-          <input type="text" id="form3Example1" class="form-control" />
-      </div>
+          <label class="form-label" for="form3Example1">Credit History</label>
+          <select name="credit_history" class="form-control">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+          </select>      </div>
     </div>
     <div class="col">
       <div class="form-outline">
-         <label class="form-label" for="form3Example2">Last name</label>
-          <input type="text" id="form3Example2" class="form-control" />
-      </div>
+         <label class="form-label" for="form3Example2">Property Area</label>
+         <select name="propert_area" class="form-control">
+          <option value="3">Urban</option>
+          <option value="2">Semiurban</option>
+          <option value="1">Rural</option>
+
+        </select>       </div>
     </div>
   </div>
-  <!-- Email input -->
-  <div class="form-outline mb-4">
-    <label class="form-label" for="form3Example3">Email address</label>
-    <input type="email" id="form3Example3" class="form-control" />
-  </div>
+  <div class="col">
+    <div class="form-outline">
+       <label class="form-label" for="form3Example2">Dependents</label>
+       <select name="dependents" class="form-control">
+        <option value="0">0</option>
+        <option value="1">2</option>
+        <option value="3">3+</option>
 
-  <!-- Password input -->
-  <div class="form-outline mb-4">
-    <label class="form-label" for="form3Example4">Password</label>
-    <input type="password" id="form3Example4" class="form-control" />
+      </select>       </div>
   </div>
+</div>
 
+<br>
 
   <!-- Submit button -->
   <button type="submit" class="btn btn-primary btn-block mb-4" style="align-content: center">Predict</button>
