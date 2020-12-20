@@ -37,7 +37,7 @@
     <div>     
    <nav class="navbar bg-dark"> 
       <ul class="nav navbar-nav navbar-expand-lg">
-        <li class style="color: black"><a href="sdp1.html"  style="color: whitesmoke; margin-left: 10px; margin-right: 10px"> Home</a></li>
+        <li class style="color: black"><a href="{{ url_for('home')}}"  style="color: whitesmoke; margin-left: 10px; margin-right: 10px"> Home</a></li>
     
       </ul>
       <ul class="nav navbar-nav navbar-expand-lg ml-auto">
@@ -48,7 +48,7 @@
   </nav> 
     </div> 
     
-    <form style="padding-left: 25%; padding-right: 25%; padding-top: 5%">
+    <form style="padding-left: 25%; padding-right: 25%; padding-top: 5%" method="POST" action="{{ url_for('predict')}}">
   <!-- 2 column grid layout with text inputs for the first and last names -->
   <div class="row mb-4">
     <div class="col">

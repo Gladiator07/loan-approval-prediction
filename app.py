@@ -16,30 +16,25 @@ def home():
 @app.route('/result',methods=['POST'])
 def predict():
     # Getting the data from the form
-    gender=request.form['gender']
-    status=request.form['married']
-    education=request.form['education']
-    work=request.form['employment']
-    app_income=request.form['applicant_income']
-    co_app_income=request.form['coapplicant_income']
-    loan_amount=request.form['loan_amount']
-    loan_amount_term=request.form['loan_amount_term']
-    credit_history = request.form['credit_history']
-    property_area = request.form['property_area']
-    dependents = request.form['dependents']
+    gender = int(request.form['gender'])
+    status = int(request.form['married'])
+    education = int(request.form['education'])
+    work = int(request.form['employment'])
+    app_income = int(request.form['applicant_income'])
+    co_app_income = float(request.form['coapplicant_income'])
+    loan_amount = float(request.form['loan_amount'])
+    loan_amount_term = float(request.form['loan_amount_term'])
+    credit_history = float(request.form['credit_history'])
+    property_area = int(request.form['property_area'])
+    dependents = int(request.form['dependents'])
 
-    query = np.array([[gender, status, education, work, int(app_income), 
-                        float(co_app_income), float(loan_amount), float(loan_amount_term), float(credit_history), property_area, dependents]])
+    query = np.array([[gender, status, education, work, app_income, 
+                        co_app_income, loan_amount, loan_amount_term, credit_history, property_area, dependents]])
 
     prediction = model.predict(query)
 
-    if prediction == 0:
-        response = "Sorry, You are not eligible for the loan 😔😔"
-    else:
-        response = "Congrats, You are eligible for the loan 😄😄"
-
     
-    return render_template('result.html', prediction=response)
+    return render_template('result.html', prediction=prediction)
 
 
 if __name__ == '__main__':
